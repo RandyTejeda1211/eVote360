@@ -20,7 +20,7 @@ namespace Domain.Entities
         [StringLength(255)]
         public string Photo { get; set; }
         [Required]
-        public string PartidoPoliticoId{ get; set; }
+        public int PartidoPoliticoId{ get; set; }
         public string State { get; set; }
 
         public PartidoPolitico PartidoPolitico { get; set; }

@@ -30,5 +30,6 @@ namespace Domain.Entities
         public ICollection<DirigentePartido> Dirigentes { get; set; } = [];
         public ICollection<PoliticAlliance> AlianzasSolicitadas { get; set; } = [];
         public ICollection<PoliticAlliance> AlianzasRecibidas { get; set; } = [];
+        public virtual ICollection<CandPosition> CandidatoPuestos { get; set; } = [];
     }
 }

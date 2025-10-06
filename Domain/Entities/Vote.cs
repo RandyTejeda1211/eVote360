@@ -19,10 +19,15 @@ namespace Domain.Entities
 
         [Required]
         public int CandidatoPuestoID { get; set; }
+
+        [Required]
+        public int CandidateId { get; set; }
+
         public DateTime DateVote { get; set; } = DateTime.Now;
 
         public Citizen Citizen { get; set; }
         public Elections Elections { get; set; }
         public CandPosition CandPosition { get; set; }
+        public Candidate Candidate { get; set; }
     }
 }
