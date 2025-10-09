@@ -21,7 +21,7 @@ namespace Domain.Entities
         public string Photo { get; set; }
         [Required]
         public int PartidoPoliticoId{ get; set; }
-        public string State { get; set; }
+        public bool State { get; set; }
 
         public PartidoPolitico PartidoPolitico { get; set; }
         public ICollection<CandPosition> CandidatoPuesto { get; set; } = [];
