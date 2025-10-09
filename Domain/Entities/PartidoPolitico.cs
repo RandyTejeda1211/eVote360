@@ -24,7 +24,7 @@ namespace Domain.Entities
 
         [StringLength(255)]
         public string Logo { get; set; }
-        public string State { get; set; }
+        public bool State { get; set; }
 
         public ICollection<Candidate> candidates { get; set; } = [];
         public ICollection<DirigentePartido> Dirigentes { get; set; } = [];

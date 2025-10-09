@@ -1,7 +1,22 @@
+using Infraestructure.Interface;
+using Infraestructure.Service;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+var tessdataPath = Path.Combine(Directory.GetCurrentDirectory(), "tessdata");
+if (!Directory.Exists(tessdataPath))
+{
+    Directory.CreateDirectory(tessdataPath);
+    Console.WriteLine("ADVERTENCIA: Carpeta tessdata creada. Coloca spa.traineddata ahí.");
+}
+
+// Registrar servicios
+builder.Services.AddScoped<IOCRService, OCRService>();
 
 var app = builder.Build();
 
